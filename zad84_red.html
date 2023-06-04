@@ -1,0 +1,39 @@
+<html> 
+<head> 
+<title> Zadanie 84 Redzimski </title>
+ <script language="JavaScript">
+ function red_start() 
+ {
+ start_red = new Date();
+ poczatek_red=start_red.getTime()
+ }
+ function red_stop()
+ {
+ stop_red = new Date();
+ koniec_red=stop_red.getTime()
+ 
+ roznica_red=koniec_red-poczatek_red;
+ pokaz1.innerHTML=roznica_red/1000+" s";
+ } 
+ </script>
+ <style>
+
+ </style>
+ </head>
+<body>
+    <script language="JavaScript">
+        dzis_red = new Date();
+         document.write("Aktualny czas : ",dzis_red.getHours(),":",dzis_red.getMinutes());
+        
+        </script>
+<form>
+<input type="button" name="Button1" value="START stoper" onclick="red_start()">
+<input type="button" name="Button1" value="STOP stoper" onclick="red_stop()">
+<br>
+<table border="4px">
+    <br>
+ <tr id="pokaz1"></tr>
+</table>
+</form>
+</body> 
+</html>

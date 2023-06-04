@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+ <textarea rows=25 cols=90>
+<html> 
+<head> 
+<title> Zadanie 86 Redzimski</title>
+ <script language="JavaScript">
+function Przycisk1_red()
+{
+pokaz1.innerHTML="Ostatnio zmodyfikowany : "+document.lastModified;
+}
+function Przycisk2_red()
+{
+    dzis = new Date();
+    mon=dzis.getMonth()+1;
+    dzien=dzis.getDate();
+rok=dzis.getFullYear();
+pokaz2.innerHTML="<br>Aktualna data : "+dzien+"."+mon+"."+rok;
+}
+function Przycisk3_red()
+{
+    min=dzis.getMinutes();
+    godz=dzis.getHours();
+pokaz3.innerHTML="<br>Aktualna godzina : "+godz+":"+min;
+}
+
+ </script>
+ <style>
+
+ </style>
+ </head>
+<body>
+    <form>
+        <a onclick="Przycisk1_red('')">
+        <img src="przycisk1.png" alt="Przycisk1" border="0"
+        onmouseover="this.src = 'przycisk1_2.png'"
+        onmouseout="this.src ='przycisk1.png'" /></a>
+        <br>
+        <a onclick="Przycisk2_red('')">
+            <img src="przycisk2.png" alt="Przycisk2" border="0"
+            onmouseover="this.src = 'przycisk2_2.png'"
+            onmouseout="this.src ='przycisk2.png'" /></a>
+            <br>
+            <a onclick="Przycisk3_red('')">
+                <img src="przycisk3.png" alt="Przycisk3" border="0"
+                onmouseover="this.src = 'przycisk3_2.png'"
+                onmouseout="this.src ='przycisk3.png'" /></a>
+        </form>
+        <table>
+            <tr id="pokaz1"></tr>
+            <tr id="pokaz2"></tr>
+            <tr id="pokaz3"></tr>
+        </table>
+
+</body> 
+</html>
+   </div>
+</body>
+ </textarea>
+</html>

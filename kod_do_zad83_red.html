@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+ <textarea rows=25 cols=90>
+<!DOCTYPE html>
+<html lang="pl-PL">
+<html>
+ <head>
+ <meta charset="utf-8">
+ <title> Zadanie 83 Redzimski</title>
+ <script language="JavaScript">
+    function dni_red(dzien,miesiac,rok)
+{
+    var dzis=new Date(); 
+d_liczba=parseFloat(dzien)
+m_liczba=parseFloat(miesiac)
+r_liczba=parseFloat(rok)
+var czyRok;
+var czyMiesiac;
+var czyDzien;
+czyRok = dzis.getFullYear();
+czyMiesiac = dzis.getMonth();
+czyDzien = dzis.getDate();
+var urodziny=new Date(r_liczba,m_liczba-1,d_liczba);
+sekund=Math.abs((dzis-urodziny)/(1000));
+minut = parseInt(sekund/60);
+godzin = parseInt(minut/60);
+ilosc_wynik = parseInt(godzin/24);
+pokaz1.innerHTML="Ilosc dni:"+ilosc_wynik;
+alert("Ilosc dni:"+ilosc_wynik);
+if ((czyRok==(r_liczba+18))&&(czyMiesiac==(m_liczba-1))&&(czyDzien==d_liczba))
+{
+pokaz2.innerHTML="Masz dziś 18 urodziny!";
+}
+if (czyRok<(r_liczba+18))
+{
+pokaz2.innerHTML="Nie masz jeszcze 18 lat!";
+}
+if ((czyRok==(r_liczba+18))&&(czyMiesiac<(m_liczba-1)))
+{
+pokaz2.innerHTML="Masz już 18 lat!";
+}
+if ((czyRok==(r_liczba+18))&&(czyMiesiac==(m_liczba-1))&&(czyDzien<d_liczba))
+{
+pokaz2.innerHTML="Masz już 18 lat!";
+}
+if (czyRok>(r_liczba+18))
+{
+pokaz2.innerHTML="Masz już 18 lat!";
+}
+if ((czyRok==(r_liczba+18))&&(czyMiesiac>(m_liczba-1)))
+{
+pokaz2.innerHTML="Nie masz jeszcze 18 lat!";
+}
+if ((czyRok==(r_liczba+18))&&(czyMiesiac==(m_liczba-1))&&(czyDzien>d_liczba))
+{
+pokaz2.innerHTML="Nie masz jeszcze 18 lat!";
+}
+    }
+    </script>
+    
+ </head>
+<body>
+    <form name="formularz">
+        Podaj dzień=
+        <input size="6" id="d1">
+        Podaj miesiąc=
+        <input size="6" id="m1">
+        Podaj rok
+        <input size="6" id="r1">
+        <br>
+        <br>
+        <input TYPE="button" Value="oblicz" onclick="dni_red(document.getElementById('d1').value,document.getElementById('m1').value,document.getElementById('r1').value)">
+        <br>
+        <br>
+        </form>
+        <table>
+        <tr id="pokaz1"></tr>
+        <tr id="pokaz2"></tr>
+        </table>
+ </body>
+</html>
+  </div>
+</body>
+ </textarea>
+</html>
